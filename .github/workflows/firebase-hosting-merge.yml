@@ -18,6 +18,7 @@ jobs:
       - run: npm run build --prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entryPoint: "./personal-website"
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_XAVIER_ONDEVILLA }}'
           channelId: live
